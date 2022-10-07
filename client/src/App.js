@@ -1,4 +1,4 @@
-import './category-item.styles.scss'
+import './main.scss'
 
 const categories = [
   {
