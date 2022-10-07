@@ -1,0 +1,34 @@
+/* Browser reset 
+important to not forget the pseudo elements !!*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* by setting the box-sizing to inherit we can now
+    change the  BODY box-sizing poperty when ever we want and it will apply to all elements */
+    box-sizing: inherit;
+}
+
+html {
+
+/* root font-size set for rem. It defines what 1rem is.
+It's important to set a % value here since the user can change the font-settings in the browser
+100% is equal to 16px . - 16px is the default browser font-size
+1rem = 16px*/
+
+    font-size: 100%; /*  16px - 1rem  */  
+    
+}
+
+body {
+    /* all elements will inherit this */
+    box-sizing: border-box;
+}
+
+
+/* to set color to text-select on page */
+::selection {
+    background-color: $color-grey;
+    color: $color-white;
+}

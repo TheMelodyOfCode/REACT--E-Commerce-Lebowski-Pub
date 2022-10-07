@@ -1,0 +1,29 @@
+// MARGIN TOP
+.u-margin-top-small{ margin-top: 2rem !important;}
+.u-margin-top-medium{ margin-top: 4rem !important;}
+.u-margin-top-big{ margin-top: 8rem !important;}
+.u-margin-top-huge{ margin-top: 10rem !important;}
+
+// MARGIN BOTTOM
+.u-margin-bottom-tiny{ margin-bottom: .8rem !important;}
+.u-margin-bottom-small { 
+    margin-bottom: 2rem !important;
+    @include respond(phone-sm) {
+    margin-bottom: .8rem !important;}
+}
+.u-margin-bottom-medium{ margin-bottom: 4rem !important; }
+.u-margin-bottom-big{ margin-bottom: 8rem !important;}
+
+// PADDING BOTTOM
+.u-padding-bottom-small{ padding-bottom: 1.5rem !important;}
+.u-padding-bottom-medium{ padding-bottom: 4rem !important; }
+.u-padding-bottom-big{ padding-bottom: 8rem !important;}
+
+// PADDING TOP
+.u-padding-top-small{ padding-bottom: 1.5rem !important;}
+.u-padding-top-medium{ padding-bottom: 4rem !important; }
+.u-padding-top-big{ padding-bottom: 8rem !important;}
+
+
+// CENTER 
+.u-center-text { text-align: center !important;}

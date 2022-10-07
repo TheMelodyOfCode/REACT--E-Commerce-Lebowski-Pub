@@ -1,0 +1,58 @@
+
+// ##########  MEDIA QUERY MANAGER  ########### \\
+
+/* Desktop first approach
+0      - 600px  Phone
+600    - 900px  tablet portrait
+900    - 1200   tablet landscape
+[1200  - 1800] is where our normal styles apply
+1800px + Big Desktop */
+
+/* $breakpoint argument choices: 
+- phone 
+- tab-port
+- tab-land
+- big-desktop */
+
+/*  NOTE: EM and REM in Media queries are not affected by our root
+    font-size settings. EM and REM are ONLY affected by the font settings
+    of the browser. default browser settings are 16px. 
+    since REM is still a bit buggy in emdia queries in some browsers we gonna use EM.
+    1 EM = 16px                 */
+    
+    @mixin respond($breakpoint) {
+
+        @if $breakpoint == phone-tiny {         
+            @media only screen and (max-width: 21.87em) {@content}; // 350px / 16
+        }
+        @if $breakpoint == phone-sm {         
+            @media only screen and (max-width: 28.75em) {@content}; // 460px / 16
+        }
+        @if $breakpoint == phone {         
+            @media only screen and (max-width: 37.5em) {@content}; // 600px / 16
+        }
+        @if $breakpoint == phone-bg {         
+            @media only screen and (max-width: 45em) {@content}; // 720px / 16
+        }
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 56.25em) {@content}; // 900px / 16
+        }
+        @if $breakpoint == w1100 {
+            @media only screen and (max-width: 68.75em) {@content}; // 1100px / 16
+        }
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em) {@content}; // 1200px / 16
+        }
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 113em) {@content}; // 1800px / 16
+        }
+    };
+
+    /* ### CENTER ELEMENT ### */
+    
+    @mixin center-horizontal-vertical {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
