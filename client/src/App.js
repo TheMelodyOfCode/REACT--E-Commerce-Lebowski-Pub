@@ -1,29 +1,7 @@
 import './main.scss'
 import {useState, useEffect} from "react";
-import React from "react";
+// import React from "react";
 
-// const categories = [
-//   {
-//     id: 1,
-//     title: 'Burger',
-//   },
-//   {
-//     id: 2,
-//     title: 'White Russian',
-//   },
-//   {
-//     id: 3,
-//     title: 'Bowling Balls',
-//   },
-//   {
-//     id: 4,
-//     title: 'Whiskey',
-//   },
-//   {
-//     id: 5,
-//     title: 'Rugs',
-//   },
-// ]
 
 const App = () => {
 
