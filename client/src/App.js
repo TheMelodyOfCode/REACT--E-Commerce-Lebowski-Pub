@@ -5,22 +5,22 @@ import {useState, useEffect} from "react";
 
 const App = () => {
 
-  const [categories, setCategories] = useState([]); // [value, setValue]
+  const [category, setCategories] = useState([]); // [value, setValue]
 
   useEffect(()=>{
     fetch('http://localhost:3001/categories')
     .then((response)=> { return response.json();})
-    .then((categories=> { setCategories(categories);}));
+    .then((category=> { setCategories(category);}));
   },[])
 
   return (
-    <section className="section-categories">
-      <div className="categories">
+    <section className="section-category">
+      <div className="category">
 
-        {categories.map(({id, title, img, imgSm}) => (
-          <div key={id} className="categories__item">
-            <img className="categories__photos" srcSet={`./img/categories/${img} 1x, ./img/categories/${imgSm} 2x `}  alt={title} /> 
-          <div className="categories__body">
+        {category.map(({id, title, img, imgSm}) => (
+          <div key={id} className="category__item">
+            <img className="category__photos" srcSet={`./img/category/${img} 1x, ./img/category/${imgSm} 2x `}  alt={title} /> 
+          <div className="category__body">
               <h2>{title}</h2>
               <p>Shop Now</p>
           </div>
