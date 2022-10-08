@@ -1,7 +1,7 @@
 import './main.scss'
 import {useState, useEffect} from "react";
 
-import CategoryItem from './components/category-item/category-item.component';
+import Directory from './components/directory/directory.component';
 
 
 const App = () => {
@@ -15,18 +15,7 @@ const App = () => {
   },[])
 
   return (
-    <section className="section-category">
-      <div className="category">
-
-        {categories.map((category) => (
-
-          <CategoryItem key={category.id} category={category} />
-
-        ))}   
-
-      </div>
-    </section>
-
+      <Directory categories={categories} />
   );
 }
 

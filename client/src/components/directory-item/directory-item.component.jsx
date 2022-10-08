@@ -1,6 +1,6 @@
 
-const CategoryItem = ({category}) => {
-    
+const DirectoryItem = ({category}) => {
+
     const {title, img, imgSm} = category;
 
     return (
@@ -15,4 +15,4 @@ const CategoryItem = ({category}) => {
 
 }
 
-export default CategoryItem;
+export default DirectoryItem;
