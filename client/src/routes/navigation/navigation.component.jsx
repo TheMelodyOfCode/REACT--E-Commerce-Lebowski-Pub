@@ -1,13 +1,22 @@
 
-import {Outlet} from 'react-router-dom';
 
 
 const Navigation = ()=> {
     return (
-          <div>
-            <h1>I am the Navigation</h1>
-            <Outlet />
-          </div>
+        <div> 
+            <div className="navigation">
+                <nav className="navigation__nav">
+                    <a href="index.html"><img className="navigation__photo" src="img/navLogo-64.png" alt="dude"/></a>
+                    <a href="index.html" class="navigation__link navigation__logo">The Big Lebowski</a>
+                    <ul className="navigation__list">
+                        <li className="navigation__item"><a href="loginReg.html" className="navigation__link">Log-In</a></li>
+                        <li className="navigation__item"><a href="shop.html" class="navigation__link">Shop</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+           
+
     );
   }
 

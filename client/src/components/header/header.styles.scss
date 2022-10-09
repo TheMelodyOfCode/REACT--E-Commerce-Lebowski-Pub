@@ -1,0 +1,41 @@
+
+.headerLoginReg {
+
+  background-color: $color-grey-dark-1;
+  }
+  
+.header {
+
+    /* 95% of the viewport height */
+    height: 90vw;
+
+    background-image: url(../../../public/img/header3-md_900.jpg); 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    // background-position: center;
+    background-repeat: no-repeat;
+  
+    /* whatever the with - the element gets fit in the box */
+    background-size: cover;
+    background-position: top;
+
+    @include respond(tab-port) {
+      background-attachment: local;
+    }
+
+
+/* this media querry targets the RESOLUTION for the backgroundimage!
+192dpi is the high resolution of the apple ratina. This HIGH RESOLUTION screen is used as a reference 
+with this settings the big picture is only used when there is a high resolution screen and a 
+min-width of 600px. - on small devices with low resolution , we have the small picture  
+the comma is like an OR statement
+-webkit-min-device-pixel-ratio: 2 - this is to make it work on SAFARI Browsers*/
+        // 600px/16 = 37.5em - 2000px/16 = 125em
+        @media  (min-resolution: 192dpi) and (min-width: 37.5),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5), 
+        (min-width: 125em)   {
+    background-image: url(../../../public/img/header2.jpg); 
+}
+  
+  }
