@@ -3,11 +3,13 @@
 @import 'sass/abstracts/variables';
 
 @import 'sass/base/animation';
+@import 'sass/base/buttons';
 @import 'sass/base/base';
 @import 'sass/base/typography';
 @import 'sass/base/utilitis';
 
 @import 'src/components/directory/directory.styles.scss';
+@import 'src/components/about/about.styles.scss';
 @import 'src/components/header/header.styles.scss';
 
 

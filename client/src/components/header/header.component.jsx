@@ -1,5 +1,6 @@
 import {Outlet} from 'react-router-dom';
 import Navigation from "../../routes/navigation/navigation.component";
+import About from '../about/about.component';
 
 const Header = ()=>{
 
@@ -8,6 +9,7 @@ const Header = ()=>{
         <header className="header">
             <Navigation />
         </header>
+        <About/>
         <Outlet />
         </div>
     )
