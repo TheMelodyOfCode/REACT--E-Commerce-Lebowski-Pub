@@ -1,22 +1,10 @@
-import './main.scss'
-import {useState, useEffect} from "react";
 
-import Directory from './components/directory/directory.component';
-
+import Home from './routes/home/home.component'
 
 const App = () => {
 
-  const [categories, setCategories] = useState([]); // [value, setValue]
+  return <Home/>;
 
-  useEffect(()=>{
-    fetch('http://localhost:3001/categories')
-    .then((response)=> { return response.json();})
-    .then((category=> { setCategories(category);}));
-  },[])
-
-  return (
-      <Directory categories={categories} />
-  );
 }
 
 export default App;
