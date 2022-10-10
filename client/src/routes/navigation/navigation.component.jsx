@@ -1,20 +1,21 @@
-
+import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 
 const Navigation = ()=> {
     return (
-        <div> 
+        <Fragment> 
             <div className="navigation">
                 <nav className="navigation__nav">
-                    <a href="index.html"><img className="navigation__photo" src="img/navLogo-64.png" alt="dude"/></a>
-                    <a href="index.html" className="navigation__link navigation__logo">The Big Lebowski</a>
+                    <Link to='/'><img className="navigation__photo" src="img/navLogo-64.png" alt="dude"/></Link>
+                    <Link to='/' className="navigation__link navigation__logo">The Big Lebowski</Link>
                     <ul className="navigation__list">
-                        <li className="navigation__item"><a href="loginReg.html" className="navigation__link">Log-In</a></li>
-                        <li className="navigation__item"><a href="shop.html" className="navigation__link">Shop</a></li>
+                        <li className="navigation__item"><Link to='/Login' className="navigation__link">Log-In</Link></li>
+                        <li className="navigation__item"><Link to='/shop' className="navigation__link">Shop</Link></li>
                     </ul>
                 </nav>
             </div> 
-        </div>
+        </Fragment>
            
 
     );
