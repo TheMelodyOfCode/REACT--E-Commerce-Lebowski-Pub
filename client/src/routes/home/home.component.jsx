@@ -1,22 +1,22 @@
 
-import {useState, useEffect} from 'react';
+import {Outlet} from 'react-router-dom';
+import { Fragment } from "react";
 
+import Navigation from "../../routes/navigation/navigation.component";
+import About from '../about/about.component';
 
-import Directory from '../../components/directory/directory.component';
+const Home = ()=>{
 
-const Home = () => {
+    return (
+        <Fragment>
+            <header className="header">
+                <Navigation />
+            </header>
+            <About/>
+            <Outlet />
+        </Fragment>
+    )
 
-  const [categories, setCategories] = useState([]); // [value, setValue]
-
-  useEffect(()=>{
-    fetch('http://localhost:3001/categories')
-    .then((response)=> { return response.json();})
-    .then((category=> { setCategories(category);}));
-  },[])
-
-  return (
-      <Directory categories={categories} />
-  );
 }
 
 export default Home;
