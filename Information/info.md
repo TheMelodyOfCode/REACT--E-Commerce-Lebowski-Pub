@@ -1,11 +1,13 @@
-
 ## Installed modules<br>
 
-### Sass
-npm i sass<br>
+> Sass
+>> npm i sass
+> React Router DOM
+>> npm i react-router-dom
+> Firebase
+>> npm i firebase
 
 ### React Router DOM<br>
-
 React Router has a web version and a nativ version.
 Nativ is used for Nativ Apps.<br>
 Here we work with the web version which has 2 technologies to offer.
@@ -19,7 +21,6 @@ pushState-method and popstate-event.
 The user gets the impression that he has changed the page.<br>
 
 #### We use BrowserRouter
-npm i react-router-dom
 https://reactrouter.com/en/dev/start/tutorial
 BrowserRouter bahaves like a component.<br>
 In order to use BrwoserRouter we need to wrap the router around the application.
@@ -36,4 +37,19 @@ in order to render a base component in a parent component we use **index** insta
       </Route>
     </Routes>
 
+#### Fragment
+a Fragemnt is a component that renders to nothing when it gets mounted on the DOM.
+Since we need a parent html element to render it is usfull if we don't want a div
+wrapped around our code.
 
+#### Link
+Link is essential an anker-tag that takes the installed BrowserRouter and routes to the specific place.
+we utelized the link component in order to lavraged proper routing.
+
+#### SVG images
+In order to use vector scaled images we need to import them as ReactComponent.
+import { ReactComponent as MySVGLogo} from './path/to/MySVGLogo'
+<MySVGLogo />
+
+#### Firebase 
+A Google platform that alows you to primarialy spin up Authentication and Database and also hosting tools etc.
