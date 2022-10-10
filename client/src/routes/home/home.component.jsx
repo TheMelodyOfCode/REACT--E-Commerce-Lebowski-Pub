@@ -2,8 +2,8 @@
 import {Outlet} from 'react-router-dom';
 import { Fragment } from "react";
 
-import Navigation from "../../routes/navigation/navigation.component";
-import About from '../about/about.component';
+import Navigation from '../navigation/navigation.component'
+import About from '../../components/about/about.component'
 
 const Home = ()=>{
 
