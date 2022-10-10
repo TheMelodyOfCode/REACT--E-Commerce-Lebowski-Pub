@@ -1,0 +1,67 @@
+
+
+/* ### SIGNUP ### */
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    // align-self: flex-end;
+    justify-content: center;
+    padding: 1rem;
+    padding-right: 1rem;
+    margin-left: 4rem;
+
+    @include respond(tab-port) {
+        margin-right: 2rem;
+        margin-left: 0;
+      }
+}
+
+.form {
+
+    &__group:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    
+        &__input {
+            font-size: $default-font-size;
+            font-family: inherit;
+            color: inherit;
+            padding: .5rem 1rem;
+            border-radius: $border-radius-small;
+            background-color: rgba($color-grey-light-2, .8);
+            border: none;
+            border-bottom: 3px solid transparent;
+            display: block;
+            transition: all .3s;
+            @include respond(phone-sm) {
+                font-size: .8rem;
+                }
+    
+            &:focus {
+                outline: none;
+                box-shadow: $shadow-black-light;
+                border-bottom: 3px solid $color-green-1;
+            }
+    
+            &:focus:invalid {
+                border: 3px solid red;
+            }
+        
+            &::-webkit-input-placeholder {
+                color: $color-grey-dark-1;
+            }
+        }
+    
+        &__label {
+            font-size: $default-font-size;
+            display: block;
+            transition: all .4s;
+        }
+    
+        &__input:placeholder-shown + &__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+}

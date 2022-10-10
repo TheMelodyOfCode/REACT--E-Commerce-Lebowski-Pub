@@ -26,9 +26,9 @@ BrowserRouter bahaves like a component.<br>
 In order to use BrwoserRouter we need to wrap the router around the application.
 We do that by integrating the router component in the **index.js**<br>
 
-in order to route we need to import **Routes** and **Route**<br>
-in order to implement a **Nested-Route** wen need to import **outlet**<br>
-in order to render a base component in a parent component we use **index** instaed of path.
+In order to route we need to import **Routes** and **Route**<br>
+To render a base component in a parent component we use **index** instead of path.
+and in order to implement a **Nested-Route** we need to import **outlet**<br>
 
     <Routes>
       <Route path='/' element={<Navigation/>} >

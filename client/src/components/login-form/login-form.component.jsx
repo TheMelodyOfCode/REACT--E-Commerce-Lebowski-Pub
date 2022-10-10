@@ -1,12 +1,11 @@
 
-import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
+// import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 import { Fragment } from "react";
 
 const LogInForm = ()=>{
 
     return (
         <Fragment>
-            <section className="section-loginReg standard">
                 <div className="login">
                     <h2 className="handWriting u-margin-bottom-small">Already have an account?</h2>
                     <h3 className="u-margin-bottom-small">Sign in with your email and password</h3>
@@ -36,7 +35,6 @@ const LogInForm = ()=>{
                     </button>
                     </div>
                 </div>
-            </section>
         </Fragment>
     )
 

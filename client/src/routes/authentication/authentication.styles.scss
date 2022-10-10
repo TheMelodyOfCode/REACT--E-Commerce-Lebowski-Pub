@@ -1,0 +1,14 @@
+
+.section-loginReg {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    // justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+
+    @include respond(phone-sm) {
+        margin-left: 2rem;
+        } 
+}
