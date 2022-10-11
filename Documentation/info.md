@@ -16,13 +16,13 @@ BrowserRouter and HashRouter.<br>
 **HashRouter** doesn't reload the page but instead jumps to marked points
 and triggers the hashchange-event.<br>
 
-**BrowserRouter** works with the HTML5-History-Api and uses to important methods.
+**BrowserRouter** works with the HTML5-History-Api to important methods.
 pushState-method and popstate-event.
 The user gets the impression that he has changed the page.<br>
 
 #### We use BrowserRouter
 https://reactrouter.com/en/dev/start/tutorial
-BrowserRouter bahaves like a component.<br>
+BrowserRouter behaves like a component.<br>
 In order to use BrwoserRouter we need to wrap the router around the application.
 We do that by integrating the router component in the **index.js**<br>
 
@@ -60,3 +60,14 @@ It's sort of a configuration to connect you get on the firebase website.
 import { initializeApp } from "firebase/app";
 In order to use **google authentication** we need to import the following
 import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider  } from 'firebase/auth'
+
+>**Firebase-Services for Authentication**
+>> getAuth, (To instanziate the services)
+>> signInWithRedirect, 
+>> signInWithPopup, 
+>> GoogleAuthProvider
+>**Firebase-Database**
+>> getFirestore (To instanziate the services)
+>> doc, (to retrieve document inside of the firestore database)
+>> getDoc, (getting documents DATA)
+>> setDoc, (setting documents DATA)
