@@ -14,12 +14,6 @@ const LogInForm = ()=>{
         await createUserDocumentFromAuth(user);
     };
 
-    /**INSTEAD OF doing this code below we call the 
-     * method signInWithGoogleRedirect directly in the button onCLICK  */ 
-    // const logGoogleRedirectUser = async () =>{
-    //     const {user} = await signInWithGoogleRedirect();
-    //     console.log({user});
-    // };
 
     return (
         <Fragment>
@@ -44,7 +38,7 @@ const LogInForm = ()=>{
                         name="submit"
                         value="send">Sign-IN
                     </button>
-                    <h3 className="u-margin-top-small standard" >Sign in with your Google account</h3>
+                    <h3 className="u-margin-top-small u-margin-bottom-tiny standard" >Sign in with your Google account</h3>
                     <button onClick={ logGoogleUser } type="button"
                         className="btn btn--google btn--animated-2"
                         value="send">GOOGLE Sign-IN

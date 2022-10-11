@@ -3,9 +3,13 @@
 import { initializeApp } from "firebase/app";
 import { 
   getAuth, 
-  signInWithRedirect, 
   signInWithPopup, 
-  GoogleAuthProvider  } from 'firebase/auth';
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  } from 'firebase/auth';
+  /**Sign-In by email and password is a firebase nativ provider and therefore
+   * we don't need to supply a provider but just a method. 
+   * These come by default from firebase/auth =  createUserWithEmailAndPassword   */ 
 import {
   getFirestore,
   doc,
@@ -35,36 +39,48 @@ provider.setCustomParameters(
 
 export const auth = getAuth();
 export const signInWithGooglePopup = ()=> signInWithPopup(auth, provider);
-export const signInWithGoogleRedirect = ()=> signInWithRedirect(auth, provider);
 
 // Firebase Database connection
 export const db = getFirestore()
 
-export const createUserDocumentFromAuth = async (userAuth) => {
+export const createUserDocumentFromAuth = async (
+  userAuth, 
+  additionalInformation = {}
+  ) => {
+    if(!userAuth) return;
+
   const userDocRef = doc(db, 'users', userAuth.uid);
 
-  console.log(userDocRef);
-
   const userSnapshot = await getDoc(userDocRef);
-  console.log(userSnapshot);
-  console.log(userSnapshot.exists()); // returns false if the object(snapshot) doesn't exists in the DB
+  // console.log(userSnapshot);
+  // console.log(userSnapshot.exists()); // returns false if the object(snapshot) doesn't exists in the DB
 
   /**If user data exists return userDocRef.
    * If user data does NOT exis
    * create / set the document with the data from userAuth in my collection*/
    if(!userSnapshot.exists()) {
     const {displayName, email} = userAuth;
-    const createAt = new Date(); // this way we know ehn the users sign in 
+    const createdAt = new Date(); // this way we know when the users sign in 
 
     try {
       await setDoc(userDocRef, {
         displayName,
         email,
-        createAt,
+        createdAt,
+        ...additionalInformation
       });
     } catch (error) {
-      console.log('ERROR creating the USER , Hoppala:', error);
+      console.log('ERROR creating the USER , fuckoff', error);
+      console.log(userDocRef);
     }
    }
    return userDocRef;
 }
+
+// /*  LOGIN with Email and Password */
+
+export const createAuthUserWithEmailAndPassword = async (email, password)=>{
+  if(!email || !password) return;
+
+  return await createUserWithEmailAndPassword(auth, email, password)
+};
