@@ -34,6 +34,27 @@
          url('./../../fonts/peralta-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('./../../fonts/peralta-v17-latin-regular.svg#Peralta') format('svg'); /* Legacy iOS */
   }
+
+  /* quicksand-300 - latin */
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('./../../fonts/quicksand-v30-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./../../fonts/quicksand-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* quicksand-regular - latin */
+  @font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./../../fonts/quicksand-v30-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./../../fonts/quicksand-v30-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
   
  
   body {
@@ -62,6 +83,19 @@
 .standard {
     font-family: 'Alkalami', serif;
     font-weight: 400;
-    /* font-size: 16px; */
+    line-height: 1.7;
+}
+
+.quickSandLightFont {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.7;
+}
+
+.quickSandRegularFont {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.7;
 }

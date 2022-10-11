@@ -10,7 +10,8 @@ const LogInForm = ()=>{
 
     const logGoogleUser = async () =>{
         const {user} = await signInWithGooglePopup();
-        const userDocRef = await createUserDocumentFromAuth(user);
+        // const userDocRef = 
+        await createUserDocumentFromAuth(user);
     };
 
     /**INSTEAD OF doing this code below we call the 
@@ -24,8 +25,8 @@ const LogInForm = ()=>{
         <Fragment>
                 <div className="login">
                     <h2 className="handWriting u-margin-bottom-small">Already have an account?</h2>
-                    <h3 className="u-margin-bottom-small">Sign in with your email and password</h3>
-                    <form className="form">
+                    <h3 className="u-margin-bottom-small standard">Sign in with your email and password</h3>
+                    <form className="form quickSandLightFont">
         
                         <div className="form__group">
                             <input type="email" className="form__input" placeholder="Your email" name="mail" required />
@@ -43,7 +44,7 @@ const LogInForm = ()=>{
                         name="submit"
                         value="send">Sign-IN
                     </button>
-                    <h3 className="u-margin-top-small u-margin-bottom-small" >Sign in with your Google Pop-up</h3>
+                    <h3 className="u-margin-top-small standard" >Sign in with your Google account</h3>
                     <button onClick={ logGoogleUser } type="button"
                         className="btn btn--google btn--animated-2"
                         value="send">GOOGLE Sign-IN

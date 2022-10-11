@@ -1,5 +1,4 @@
 
-
 import { Fragment } from "react";
 
 const SignUpForm = ()=>{
@@ -8,10 +7,10 @@ const SignUpForm = ()=>{
         <Fragment>
                   <div className="signup">
             <h2 className="handWriting u-margin-bottom-small">Don't have an account?</h2>
-            <h3 className="u-margin-bottom-small">Register now</h3>
+            <h3 className="u-margin-bottom-small standard">Register now</h3>
 
-                <form className="form">
-                    <div className="form__group">
+                <form onSubmit={()=>{}} className="form quickSandLightFont">
+                    <div className="form__group ">
                         <input type="text" className="form__input" placeholder="Username" name="username"/>
                         <label label="username" className="form__label">Username</label>
                     </div>
