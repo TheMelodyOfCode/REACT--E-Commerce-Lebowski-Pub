@@ -1,13 +1,24 @@
 
-import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import { Fragment } from "react";
+import { 
+    signInWithGooglePopup, 
+    createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
+
 
 const LogInForm = ()=>{
+
 
     const logGoogleUser = async () =>{
         const {user} = await signInWithGooglePopup();
         const userDocRef = await createUserDocumentFromAuth(user);
     };
+
+    /**INSTEAD OF doing this code below we call the 
+     * method signInWithGoogleRedirect directly in the button onCLICK  */ 
+    // const logGoogleRedirectUser = async () =>{
+    //     const {user} = await signInWithGoogleRedirect();
+    //     console.log({user});
+    // };
 
     return (
         <Fragment>
@@ -32,7 +43,7 @@ const LogInForm = ()=>{
                         name="submit"
                         value="send">Sign-IN
                     </button>
-                    <h3 className="u-margin-top-small u-margin-bottom-small" >Sign in with your Google Account</h3>
+                    <h3 className="u-margin-top-small u-margin-bottom-small" >Sign in with your Google Pop-up</h3>
                     <button onClick={ logGoogleUser } type="button"
                         className="btn btn--google btn--animated-2"
                         value="send">GOOGLE Sign-IN
