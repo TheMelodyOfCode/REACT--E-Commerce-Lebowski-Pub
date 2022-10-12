@@ -4,6 +4,7 @@ import {
     createAuthUserWithEmailAndPassword, 
     createUserDocumentFromAuth 
     } from "../../utils/firebase/firebase.utils";
+import FormInput from "../form-input/form-input.component";
 
 const defaultFormFields = {
     /* this object ist the value for formFields basically the initial empty state*/
@@ -64,45 +65,43 @@ const SignUpForm = ()=>{
 
                 <form onSubmit={handleSubmit} className="form quickSandLightFont">
                     <div className="form__group ">
-                        <input 
+                        <FormInput 
                         onChange={handleChange} 
+                        label='Username'
                         type="text" 
-                        className="form__input" 
                         placeholder="Username" 
                         name="displayName" 
                         value={displayName}
                         />
-                        <label label="Username" className="form__label">Username</label>
                     </div>
                     <div className="form__group">
-                        <input 
+                        <FormInput 
                         onChange={handleChange} 
+                        label='Your email'
                         type="email" 
-                        required 
-                        className="form__input" 
+                        required                     
                         placeholder="Your email" 
                         name="email" 
                         value={email}
                         />
-                        <label label="email" className="form__label">Your email</label>
                     </div>
                     <div className="form__group">       
-                        <input onChange={handleChange}
+                        <FormInput onChange={handleChange}
+                        label='Choose password'
                          type="password" 
-                         required className="form__input" 
+                         required  
                          placeholder="Choose password" 
                          name="password" 
                          value={password} />
-                        <label label="password" className="form__label">Choose password</label>
                     </div>
                     <div className="form__group">
-                        <input onChange={handleChange} 
+                        <FormInput onChange={handleChange} 
+                        label='Confirm password'
                         type="password" 
-                        required className="form__input" 
+                        required  
                         placeholder="Confirm password"
                         name="confirmPassword" 
                         value={confirmPassword} />
-                        <label label="confirmPassword" className="form__label">Confirm password</label>
                     </div>
 
                     <button type="submit" className="btn btn--black btn--animated" >Sign UP</button>   
