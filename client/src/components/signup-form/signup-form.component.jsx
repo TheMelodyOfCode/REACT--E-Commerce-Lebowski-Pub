@@ -1,10 +1,13 @@
 /* we use useState to keep track of the value of the input fields */
 import { Fragment, useState } from "react";
-import { 
+import 
+    { 
     createAuthUserWithEmailAndPassword, 
     createUserDocumentFromAuth 
     } from "../../utils/firebase/firebase.utils";
+
 import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.component";
 
 const defaultFormFields = {
     /* this object ist the value for formFields basically the initial empty state*/
@@ -54,14 +57,14 @@ const SignUpForm = ()=>{
     /* this function takes the input event whenever the text changes */
     const handleChange = (event) =>{
         const {name, value} = event.target;
-
         setFormFields({...formFields, [name]: value})
     }
+    
     return (
         <Fragment>
-                  <div className="signup">
-            <h2 className="handWriting u-margin-bottom-small">Don't have an account?</h2>
-            <h3 className="u-margin-bottom-small standard">Register now</h3>
+            <div className="signup">
+                <h2 className="handWriting u-margin-bottom-small">Don't have an account?</h2>
+                <h3 className="u-margin-bottom-small standard">Register now</h3>
 
                 <form onSubmit={handleSubmit} className="form quickSandLightFont">
                     <div className="form__group ">
@@ -103,8 +106,8 @@ const SignUpForm = ()=>{
                         name="confirmPassword" 
                         value={confirmPassword} />
                     </div>
-
-                    <button type="submit" className="btn btn--black btn--animated" >Sign UP</button>   
+          
+                    <Button btnType='black' btnAnimation='fromBottom' type="submit" >Sign UP</Button>   
                 </form>
         </div>
         </Fragment>
