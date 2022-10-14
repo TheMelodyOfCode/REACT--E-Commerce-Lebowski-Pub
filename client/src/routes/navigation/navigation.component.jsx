@@ -23,7 +23,7 @@ const Navigation = ()=> {
                         <Link to='/auth' className="navigation__link">Log-In</Link>
                         </li>
                     )} 
-                        <li className="navigation__item"><Link to='shop' className="navigation__link">Shop</Link></li>
+                        <li className="navigation__item"><Link to='/shop' className="navigation__link">Shop</Link></li>
                     </ul>
                 </nav>
             </div> 

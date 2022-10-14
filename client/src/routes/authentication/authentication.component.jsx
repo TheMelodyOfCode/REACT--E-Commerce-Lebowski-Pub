@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import Navigation from '../navigation/navigation.component';
 import LogInForm from '../../components/login-form/login-form.component';
 import SignUpForm from '../../components/signup-form/signup-form.component';
-
+import Footer from '../footer/footer.component';
 
 const Authentication =()=> {
 
@@ -16,6 +16,7 @@ const Authentication =()=> {
             <LogInForm />
             <SignUpForm />
             </section>
+            <Footer />
         </Fragment>
     )
 

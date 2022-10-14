@@ -4,6 +4,7 @@ import { Fragment } from "react";
 
 import Navigation from '../navigation/navigation.component'
 import About from '../../components/about/about.component'
+import Footer from '../footer/footer.component';
 
 const Home = ()=>{
 
@@ -12,8 +13,9 @@ const Home = ()=>{
             <header className="header">
                 <Navigation />
             </header>
-            <About/>
+            <About />
             <Outlet />
+            <Footer />
         </Fragment>
     )
 
