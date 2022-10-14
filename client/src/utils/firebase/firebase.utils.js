@@ -7,6 +7,8 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
   } from 'firebase/auth';
   /**Sign-In by email and password is a firebase nativ provider and therefore
    * we don't need to supply a provider but just a method. 
@@ -78,15 +80,20 @@ export const createUserDocumentFromAuth = async (
    return userDocRef;
 }
 
-
 export const createAuthUserWithEmailAndPassword = async (email, password)=>{
   if(!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password)
 };
-
 
 export const signInAuthUserWithEmailAndPassword = async (email, password)=>{
   if(!email || !password) return;
 
   return await signInWithEmailAndPassword(auth, email, password)
 };
+
+export const signOutUser = async ()=> await signOut(auth);
+
+
+export const onAuthStateChangedListener = (callback) => 
+  /**whenever auth changes give me a callback */
+  onAuthStateChanged(auth, callback );

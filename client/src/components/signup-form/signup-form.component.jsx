@@ -9,6 +9,7 @@ import
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 
+
 const defaultFormFields = {
     /* this object ist the value for formFields basically the initial empty state*/
     displayName: '',
@@ -21,7 +22,7 @@ const SignUpForm = ()=>{
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {displayName, email, password, confirmPassword} = formFields;
 
-    // console.log(formFields);
+    // console.log('hit! the dude abides');
 
     const resetFormFields = ()=>{
         setFormFields(defaultFormFields);
@@ -34,17 +35,16 @@ const SignUpForm = ()=>{
             alert("passwords do not match");
             return;
           }
-    
-          try {
-            const {user} = await createAuthUserWithEmailAndPassword(
-                email, 
-                password
-                );
+        try {
+        const {user} = await createAuthUserWithEmailAndPassword(
+            email, 
+            password
+            );
+        await   createUserDocumentFromAuth(user, { displayName })
 
-        await createUserDocumentFromAuth(user, { displayName })
         resetFormFields();
     
-          } catch(error) {
+            } catch(error) {
             if (error.code === 'auth/email-already-in-use') {
                 alert('cannot create user - email already in use')
             } else {

@@ -1,13 +1,12 @@
 
-import { Fragment } from "react";
-import Button from "../button/button.component";
-import FormInput from "../form-input/form-input.component";
 
-import { useState } from "react";
+import { Fragment ,useState } from "react";
 import { 
     signInWithGooglePopup, 
-    createUserDocumentFromAuth,
     signInAuthUserWithEmailAndPassword  } from "../../utils/firebase/firebase.utils";
+
+import Button from "../button/button.component";
+import FormInput from "../form-input/form-input.component";
 
 const defaultFormFields = {
     /* this object ist the value for formFields basically the initial empty state*/
@@ -20,8 +19,7 @@ const LogInForm = ()=>{
     const { email, password} = formFields;
 
     const signInWithGoogle = async () =>{
-        const {user} = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     };
 
     const resetFormFields = ()=>{
@@ -31,8 +29,12 @@ const LogInForm = ()=>{
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-          const response = await signInAuthUserWithEmailAndPassword(email, password);
-          console.log(response);
+           await signInAuthUserWithEmailAndPassword(
+                email, 
+                password
+            );
+
+
           resetFormFields();
         } catch(error) { 
           switch(error.code) {
@@ -49,7 +51,6 @@ const LogInForm = ()=>{
       }
       const handleChange = (event) => {
         const { name, value} = event.target;
-
         setFormFields({...formFields, [name]: value })
     }
 

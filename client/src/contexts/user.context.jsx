@@ -1,5 +1,6 @@
 
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import { onAuthStateChangedListener, createUserDocumentFromAuth } from "../utils/firebase/firebase.utils";
 
 //this is the actual value you want to access
 export const UserContext = createContext({
@@ -23,6 +24,20 @@ export const UserContext = createContext({
 export const UserProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(null);
     const value = { currentUser, setCurrentUser};
+
+    /* centralized user authentication and creation */
+    useEffect(()=> {
+       const unsubscribe = onAuthStateChangedListener((user)=>{
+        if (user) {
+            createUserDocumentFromAuth(user);
+        }
+        setCurrentUser(user);
+        // console.log(user);
+       })
+
+       return unsubscribe;
+    }, [])
+
     // value holds the actual contextual values
     return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
