@@ -1,5 +1,5 @@
-import {Routes, Route} from 'react-router-dom';
 
+import {Routes, Route} from 'react-router-dom';
 
 import Home from './routes/home/home.component';
 import MySQLAPI from './utils/mysql-api/mysql-api.utils';
