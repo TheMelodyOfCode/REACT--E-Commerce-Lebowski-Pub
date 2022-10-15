@@ -18,8 +18,8 @@ server.use("/db", dbRoutes);
 
 // Redirects for route from REACT
 
-server.get("/categories", (req, res)=>{
-        res.redirect("/db/categories")
+server.get("/directoryItems", (req, res)=>{
+        res.redirect("/db/directoryItems")
 });
 
 

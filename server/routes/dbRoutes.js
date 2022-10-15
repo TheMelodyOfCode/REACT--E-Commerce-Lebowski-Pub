@@ -16,7 +16,7 @@ dbRoutes.get("/", (req, res)=>{
 });
 
 /* We have set a prefix in the app.js*/
-dbRoutes.get("/categories", (req, res)=>{
+dbRoutes.get("/directoryItems", (req, res)=>{
     db.query(
        'SELECT * FROM `directoryitems`',
        function(err, results, fields) {
