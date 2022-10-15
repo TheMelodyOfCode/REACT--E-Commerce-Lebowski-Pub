@@ -17,10 +17,25 @@ server.use("/db", dbRoutes);
 
 
 // Redirects for route from REACT
-
 server.get("/directoryItems", (req, res)=>{
         res.redirect("/db/directoryItems")
 });
+server.get("/bowlingballs", (req, res)=>{
+        res.redirect("/db/bowlingballs")
+});
+server.get("/burger", (req, res)=>{
+        res.redirect("/db/burger")
+});
+server.get("/cocktails", (req, res)=>{
+        res.redirect("/db/cocktails")
+});
+server.get("/rugs", (req, res)=>{
+        res.redirect("/db/rugs")
+});
+server.get("/whiskey", (req, res)=>{
+        res.redirect("/db/whiskey")
+});
+
 
 
 // 404 Handler
