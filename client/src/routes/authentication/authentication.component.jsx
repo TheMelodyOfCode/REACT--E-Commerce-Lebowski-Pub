@@ -9,7 +9,7 @@ const Authentication =()=> {
 
     return (
         <Fragment>
-            <header className="headerLoginReg">
+            <header className="headerNoBackgroundImage">
                 <Navigation />
             </header>
             <section className="section-loginReg standard">

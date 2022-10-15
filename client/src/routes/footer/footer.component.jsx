@@ -11,7 +11,7 @@ const Footer = ()=>{
 
                     <ul class="footer__list">
                         <li class="footer__item"><Link to='/shop'  class="footer__link">Shop</Link></li>
-                            <li class="footer__item"><Link to='#'  class="footer__link">Goodbye</Link> </li>
+                            <li class="footer__item"><Link to='/goodbye'  class="footer__link">Goodbye</Link> </li>
                             <li class="footer__item"><Link to='#' class="footer__link">Privacy Policy</Link> </li>
                             <li class="footer__item"><Link to='img/Lebowskis-WhiteRussianMenu.pdf' class="footer__link">Drinks</Link> </li>  
                     </ul>
