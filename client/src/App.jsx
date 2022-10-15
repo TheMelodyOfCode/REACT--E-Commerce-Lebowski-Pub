@@ -5,11 +5,8 @@ import Home from './routes/home/home.component';
 import MySQLAPI from './utils/mysql-api/mysql-api.utils';
 import Authentication from './routes/authentication/authentication.component';
 import Goodbye from './routes/goodbye/goodbye.component';
+import Shop from './routes/shop/shop.component';
 
-
-const Shop = ()=> {
-  return <h1>I am the Shop Page</h1>
-}
 
 const App = () => {
 
