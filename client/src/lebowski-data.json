@@ -1,0 +1,19 @@
+[
+
+
+{
+"id":"1",
+"title":"Ultimate Burger",
+"img":"burger1.jpg",
+"imgSm":"burger1-sm.jpg",
+"price":"12 ",
+"route":"\/burger"
+},
+{"id":"2","title":"Maniac Burger","img":"burger2.jpg","imgSm":"burger2-sm.jpg","price":"16","route":"\/burger"},
+{"id":"3","title":"Madness Burger","img":"burger3.jpg","imgSm":"burger3-sm.jpg","price":"8","route":"\/burger"},
+{"id":"4","title":"Crazy Burger","img":"burger4.jpg","imgSm":"burger4-sm.jpg","price":"10","route":"\/burger"},
+{"id":"5","title":"Smokey Burger","img":"burger5.jpg","imgSm":"burger5-sm.jpg","price":"11","route":"\/burger"},
+{"id":"6","title":"Saddam Burger","img":"burger6.jpg","imgSm":"burger6-sm.jpg","price":"7.50","route":"\/burger"},
+{"id":"7","title":"Bunny Burger","img":"burger7.jpg","imgSm":"burger7-sm.jpg","price":"17","route":"\/burger"}
+
+]

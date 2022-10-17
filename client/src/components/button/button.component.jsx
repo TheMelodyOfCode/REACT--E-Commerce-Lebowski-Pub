@@ -5,6 +5,7 @@ const BUTTON_Style_CLASSES = {
     white: 'btn--white',
     black: 'btn--black',
     google: 'btn--google',
+    shop: '--shop',
 }
 
 const BUTTON_Animation_CLASSES = {

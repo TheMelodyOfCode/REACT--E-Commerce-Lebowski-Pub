@@ -1,7 +1,7 @@
 
 import { Fragment } from 'react';
 import Navigation from '../navigation/navigation.component';
-
+import CategoryPreview from '../../components/category-preview/category-preview.component';
 import Footer from '../footer/footer.component';
 
 const Shop =()=> {
@@ -12,6 +12,7 @@ const Shop =()=> {
                 <Navigation />
             </header>
 
+            <CategoryPreview />
 
             <Footer />
         </Fragment>
