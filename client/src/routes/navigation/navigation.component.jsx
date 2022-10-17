@@ -5,6 +5,7 @@ import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import { UserContext } from "../../contexts/user.context";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
 const Navigation = ()=> {
     const { currentUser } = useContext(UserContext);
@@ -28,9 +29,8 @@ const Navigation = ()=> {
                         <li className="navigation__item"><Link to='/shop' className="navigation__link">Shop</Link></li>
                     </ul>
                     <CartIcon />
-                    {/* <Link to='/auth'><img class="navigation__photo" src="img/cart-96.png" alt="dude" /></Link> */}
+                    <CartDropdown />
                 </nav>
-
             </div> 
         </Fragment>
     );

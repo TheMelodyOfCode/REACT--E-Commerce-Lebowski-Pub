@@ -5,7 +5,6 @@
     padding: 2rem;
     width: 100%;
     background-color: transparent;
-
     @include respond(phone) {
       padding: 0;
     }
