@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import { UserContext } from "../../contexts/user.context";
+import { CartContext } from "../../contexts/cart.context";
+
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
 const Navigation = ()=> {
     const { currentUser } = useContext(UserContext);
-
+    const { isCartOpen } = useContext(CartContext);
 
     return (
         <Fragment> 
@@ -29,7 +31,11 @@ const Navigation = ()=> {
                         <li className="navigation__item"><Link to='/shop' className="navigation__link">Shop</Link></li>
                     </ul>
                     <CartIcon />
-                    <CartDropdown />
+                    {/* here we check  with the short-circuit operator for the truthyness ot this statement
+                    both side have to be a trusty value
+                    isCartOpen is a boolean and can be true aor false and CartDropdown is  a trusthy value since it is a component/ function
+                    so if isCartopen is true it returns the CartDropdown component*/}
+                    {isCartOpen && <CartDropdown />}
                 </nav>
             </div> 
         </Fragment>

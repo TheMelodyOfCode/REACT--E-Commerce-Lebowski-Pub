@@ -1,10 +1,9 @@
 
-import {useState, useEffect} from 'react';
-import { createContext } from "react";
+import {useState, createContext , useEffect} from 'react';
 
 // import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils.js";
 
- import PRODUCTS from '../lebowski-data.json';
+import PRODUCTS from '../lebowski-data.json';
 
 export const ProductsContext = createContext(
     {
@@ -14,7 +13,7 @@ export const ProductsContext = createContext(
 
 export const ProductsProvider = ({children})=>{
     const [products, setProducts] =  useState(PRODUCTS);
-    const value = {products};
+    const value = {products, setProducts};
   
     return (
         <ProductsContext.Provider value={value}> {children} </ProductsContext.Provider>
