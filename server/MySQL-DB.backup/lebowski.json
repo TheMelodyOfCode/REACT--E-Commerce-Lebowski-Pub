@@ -2,6 +2,7 @@
 {"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
 {"type":"database","name":"lebowski"},
 {"type":"table","name":"bowlingballs","database":"lebowski","data":
+
 [
 {"id":"1","title":"The Antidote","img":"ball1.jpg","img-sm":"","price":"25 ","route":"\/bowlingballs"},
 {"id":"2","title":"Path Rising","img":"ball2.jpg","img-sm":"","price":"20 ","route":"\/bowlingballs"},
