@@ -1,4 +1,4 @@
-import {useState, createContext } from 'react';
+import {useState, createContext, useEffect } from 'react';
 
 // import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils.js";
 
@@ -29,6 +29,7 @@ export const CartContext = createContext(
         setIsCartOpen: ()=>{},
         cartItems: [],
         addItemToCart: ()=>{},
+        cartCount: 0,
     }
 );
 
@@ -37,12 +38,30 @@ export const CartContext = createContext(
 export const CartProvider = ({children})=>{
     const [isCartOpen, setIsCartOpen] =  useState(false);
     const [cartItems, setCartItems] = useState([]);
+    const [cartCount, setCartCount] = useState(0);
+    // const [cartTotal, setCartTotal] = useState();
+
+/** useEffect, we pass it a callback and this callback runs 
+ *  everytime the dependency array changes  */
+    useEffect(()=>{
+        const newCartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0)
+        setCartCount(newCartCount);
+    }, [cartItems])
+
+    // useEffect(()=>{
+    //     const newCartTotal = cartItems.reduce(
+    //         (total, cartItem) => total + cartItem.quantity * cartItem.price,
+    //         0)
+    //     setCartTotal(newCartTotal);
+    // }, [cartItems])
+
+
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addCartItem(cartItems, productToAdd));
     }
 
-    const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems};
+    const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems, cartCount};
 
     return (
         <CartContext.Provider value={value} > {children} </CartContext.Provider>
