@@ -5,7 +5,7 @@ import { CartContext } from '../../contexts/cart.context';
 
 const CheckoutItem = ({cartItem})=>{
 
-const { title, imgSm, price, quantity} = cartItem;
+const { title, img, price, quantity} = cartItem;
 
 const {clearItemFromCart, addItemToCart, removeItemFromCart} = useContext(CartContext)
 
@@ -16,7 +16,7 @@ const removeItemHandler = ()=> removeItemFromCart(cartItem);
 return (
     <div className='checkOutItem__container'>
         <div className='checkOutItem__imageContainer'>
-        <img srcSet={`./img/shopItems/${imgSm} `}  alt={title} />
+        <img srcSet={`./img/shopItems/${img} `}  alt={title} />
         </div>
         <span className='checkOutItem__title' >{title}</span>
         <span className='checkOutItem__quantityBox' >
