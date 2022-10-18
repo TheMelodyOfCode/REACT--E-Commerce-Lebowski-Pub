@@ -1,12 +1,17 @@
 
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
-
+import Navigation from '../../routes/navigation/navigation.component';
+import Footer from '../footer/footer.component';
 
 const Checkout = () => {
         const { cartItems, cartTotal} = useContext(CartContext)
     return (
+        <Fragment>
+            <header className="headerNoBackgroundImage">
+                <Navigation />
+            </header>
         <div className='checkout__container'>
             <div className='checkout__header'>
                 <div className='checkout__headerBlock'>
@@ -30,6 +35,8 @@ const Checkout = () => {
             ))}
             <span className='checkout__total'>Total: {cartTotal}€</span>
         </div>
+        <Footer />
+        </Fragment>
     );
 };
 
