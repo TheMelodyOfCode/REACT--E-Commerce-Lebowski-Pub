@@ -27,6 +27,9 @@ body {
     padding: 1.25rem 2.5rem;
 }
 
+#root {
+    border: 1px solid $color-grey-dark-1;
+}
 
 /* to set color to text-select on page */
 ::selection {
