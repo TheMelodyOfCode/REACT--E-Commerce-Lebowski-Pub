@@ -15,7 +15,7 @@ const App = () => {
       <Route path='/' element={<Home/>} >
           <Route index     element={<MySQLAPI/>} />
       </Route>
-      <Route path='shop'   element={<Shop/>} />
+      <Route path='shop/*'   element={<Shop/>} />
       <Route path='auth' element={<Authentication />} /> 
       <Route path='goodbye' element={<Goodbye/>} /> 
       <Route path='checkout' element={<Checkout />} /> 

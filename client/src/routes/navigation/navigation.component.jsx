@@ -17,7 +17,8 @@ const Navigation = ()=> {
         <Fragment> 
             <div className="navigation">
                 <nav className="navigation__nav">
-                    <Link to='/'><img className="navigation__photo" src="img/navLogo-64.png" alt="dude"/></Link>
+                    {/* <Link to='/'><NavIcon className="navigation__photo"  alt="dude"/></Link> */}
+                    <Link to='/'><img className="navigation__photo" src="./img/navLogo-64.png" alt="dude"/></Link>
                     <Link to='/' className="navigation__link navigation__logo">The Big Lebowski</Link>
                     <ul className="navigation__list">
                     { 

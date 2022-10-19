@@ -38,13 +38,13 @@ const SHOP_DATA = [
   {
     title: 'Bowling Balls',
     items: [
-      {id:1,title:'The Antidote',img:'ball1.jpg',imgSm:'',price:25 ,route:'/bowlingballs'},
-      {id:2,title:'Path Rising',img:'ball2.jpg',imgSm:'',price:20 ,route:'/bowlingballs'},
-      {id:3,title:'Idol Helios',img:'ball3.jpg',imgSm:'',price:35 ,route:'/bowlingballs'},
-      {id:4,title:'Nova',img:'ball4.jpg',imgSm:'',price:40,route:'/bowlingballs'},
-      {id:5,title:'RST 3 X',img:'ball5.jpg',imgSm:'',price:60,route:'/bowlingballs'},
-      {id:6,title:'ZONE',img:'ball6.jpg',imgSm:'',price:58,route:'/bowlingballs'},
-      {id:7,title:'ICE',img:'ball7.jpg',imgSm:'',price:57,route:'/bowlingballs'}
+      {id:1,title:'The Antidote',img:'ball1.png',imgSm:'',price:25 ,route:'/bowlingballs'},
+      {id:2,title:'Path Rising',img:'ball2.png',imgSm:'',price:20 ,route:'/bowlingballs'},
+      {id:3,title:'Idol Helios',img:'ball3.png',imgSm:'',price:35 ,route:'/bowlingballs'},
+      {id:4,title:'Nova',img:'ball4.png',imgSm:'',price:40,route:'/bowlingballs'},
+      {id:5,title:'RST 3 X',img:'ball5.png',imgSm:'',price:60,route:'/bowlingballs'},
+      {id:6,title:'ZONE',img:'ball6.png',imgSm:'',price:58,route:'/bowlingballs'},
+      {id:7,title:'ICE',img:'ball7.png',imgSm:'',price:57,route:'/bowlingballs'}
     ],
   },
   {

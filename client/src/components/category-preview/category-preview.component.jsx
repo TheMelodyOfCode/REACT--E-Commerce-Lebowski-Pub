@@ -1,36 +1,29 @@
 
-import { useContext } from "react";
 
-import { ProductsContext } from "../../contexts/products.context";
+import { Link } from 'react-router-dom';
 import ProductCard from "../product-card/product-card.component";
 
 
-const CategoryPreview = ()=> {
-
-    const {products} = useContext(ProductsContext);
+const CategoryPreview = ({title, products})=> {
 
     return (
         <section className="section-shopItems">
           <div className="shopItems"> 
-          <h2 className="shopItems__title handWriting">Burger</h2>
-          <div className="shopItems__category">
-            {products.map((product) => (
-                
-            <ProductCard key={product.id} product={product} />
-                
-          ))}   
-          {/* <h2 className="shopItems__title handWriting">Whiskey</h2>
-          <div className="shopItems__category">
-            {products.map((product) => (
-                
-            <ProductCard key={product.id} product={product} />
-                
-          ))}    */}
-            </div>
+
+
+                  <Link className='shopItems__title handWriting' to={title} >{title.toUpperCase()}</Link>
+                  <div className="shopItems__category">
+                  {products.filter((_, idx)=> idx < 4)
+                    .map((product)=> 
+                    (<ProductCard key={product.id} product={product} />
+                    ))}
+                    
+                  </div>
+
             </div>
         </section>
 
-    )
-}
+    );
+};
 
 export default CategoryPreview;
