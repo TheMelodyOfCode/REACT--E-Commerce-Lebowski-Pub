@@ -5,16 +5,21 @@ const BUTTON_Style_CLASSES = {
     white: 'btn--white',
     black: 'btn--black',
     google: 'btn--google',
-    shop: '--shop',
+    shop: 'btn--shop',
 }
 
 const BUTTON_Animation_CLASSES = {
-
     fromBottom: 'btn--animated',
     fromLeft: 'btn--animated-2'
 }
 
-// Children is whatever is inside of the button component
+/**
+ * @param {whatever is inside of the button component} Children 
+ * @param {string value to the key} btnType
+ * @param {string value to the key} btnAnimation
+ * @param {to pass ALL the other types - as example type=sumit etc} otherProps
+ * @returns the button component with all what's inside includeing the otherprops
+ */
 const Button = ({children, btnType, btnAnimation, ...otherProps})=>{
 
     return (

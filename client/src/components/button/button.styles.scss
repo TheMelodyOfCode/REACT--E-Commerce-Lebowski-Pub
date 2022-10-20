@@ -75,32 +75,32 @@
             font-size: .9rem;
             }
     }
-//     &--shop {
-//         width: 12%;
-//         opacity: 0.7;
-//         position: absolute;
-//         display: none;
-//         background-color: $color-white;
-//         color: $color-black;
-//         &::after {
-//           background-color: $color-grey-light-2;
-//         }
-//         @include respond(w1100) {
-//           font-size: 1rem;
-//         }  
-//         @include respond(tab-port) {
-//           width: 14%;
-//           font-size: .8rem;
-//         }  
-//         @include respond(phone) {
-//           width: 16%;
-//           font-size: .7rem;
-//         }  
-//         @include respond(phone-sm) {
-//           width: 18%;
-//           font-size: .7rem;
-//         }  
-// }
+    &--shop {
+        width: 12%;
+        opacity: 0.7;
+        position: absolute;
+        display: none;
+        background-color: $color-white;
+        color: $color-black;
+        &::after {
+          background-color: $color-grey-light-2;
+        }
+        @include respond(w1100) {
+          font-size: 1rem;
+        }  
+        @include respond(tab-port) {
+          width: 14%;
+          font-size: .8rem;
+        }  
+        @include respond(phone) {
+          width: 16%;
+          font-size: .7rem;
+        }  
+        @include respond(phone-sm) {
+          width: 18%;
+          font-size: .7rem;
+        }  
+}
 
 
     &::after {

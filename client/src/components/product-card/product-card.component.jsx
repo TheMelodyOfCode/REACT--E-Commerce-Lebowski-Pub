@@ -18,7 +18,8 @@ return (
                 <span className='name'>{title}</span>
                 <span className='price'>{price}</span>
             </div>   
-            <Button className='btn shopItems__button'  type="submit" onClick={addProductToCart} >ADD to Cart</Button>   
+            {/* <Button className='btn shopItems__button'  type="submit" onClick={addProductToCart} >ADD to Cart</Button>    */}
+            <Button btnType='shop'  type="submit" onClick={addProductToCart} >ADD to Cart</Button>   
     </div>
 );
 
