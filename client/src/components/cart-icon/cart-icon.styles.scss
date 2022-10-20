@@ -7,7 +7,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
         cursor: pointer;
         &:hover {
             cursor: pointer;
@@ -30,9 +29,10 @@
         justify-content: flex-start;
         margin-right: .3rem;
         @include respond(phone-tiny) {
-            max-height: 2.5rem;
+            max-height: 3rem;
             margin-left: 4.5rem;
           }
+
 
     }
 
