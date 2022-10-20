@@ -11,7 +11,7 @@
       padding-bottom: 2rem;
     }
     @include respond(phone-tiny) {
-      height: 13rem;
+      // height: 13rem;
       padding-bottom: 1rem;
     }
 }
@@ -34,13 +34,13 @@
             color: $color-green-1;
 
             @include respond(tab-port) {
-                font-size: 1.3rem;
+                font-size: 1rem;
               }
               @include respond(phone) {
-                font-size: 1.2rem;
+                font-size: .8rem;
               }
               @include respond(phone-tiny) {
-                font-size: .7rem;
+                font-size: .5rem;
               }
         }
     }
