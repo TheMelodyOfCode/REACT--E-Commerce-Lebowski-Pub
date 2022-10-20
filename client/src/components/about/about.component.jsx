@@ -1,8 +1,5 @@
 
-
-
 const About = ()=> {
-
     return (
         <div>
             <section className="section-about">
@@ -19,7 +16,6 @@ const About = ()=> {
 
         </div>
     )
-
 }
 
 export default About;
