@@ -7,36 +7,6 @@
 > Firebase
 >> npm i firebase
 
-### React Router DOM<br>
-React Router has a web version and a nativ version.
-Nativ is used for Nativ Apps.<br>
-Here we work with the web version which has 2 technologies to offer.
-BrowserRouter and HashRouter.<br>
-
-**HashRouter** doesn't reload the page but instead jumps to marked points
-and triggers the hashchange-event.<br>
-
-**BrowserRouter** works with the HTML5-History-Api to important methods.
-pushState-method and popstate-event.
-The user gets the impression that he has changed the page.<br>
-
-#### We use BrowserRouter
-https://reactrouter.com/en/dev/start/tutorial
-BrowserRouter behaves like a component.<br>
-In order to use BrwoserRouter we need to wrap the router around the application.
-We do that by integrating the router component in the **index.js**<br>
-
-In order to route we need to import **Routes** and **Route**<br>
-To render a base component in a parent component we use **index** instead of path.
-and in order to implement a **Nested-Route** we need to import **outlet**<br>
-
-    <Routes>
-      <Route path='/' element={<Navigation/>} >
-        <Route index     element={<Home/>} />
-        <Route path='shop'   element={<Shop/>} />
-      </Route>
-    </Routes>
-
 #### Fragment
 a Fragemnt is a component that renders to nothing when it gets mounted on the DOM.
 Since we need a parent html element to render it is usfull if we don't want a div
@@ -51,23 +21,4 @@ In order to use vector scaled images we need to import them as ReactComponent.
 import { ReactComponent as MySVGLogo} from './path/to/MySVGLogo'<br>
 <MySVGLogo/><br>
 
-#### Firebase 
-A Google platform that alows you to primarialy spin up Authentication and Database and also hosting tools etc.<br>
 
-**initializeApp** 
-initializeApp connects the local installed firebase libary with the only app.
-It's sort of a configuration to connect you get on the firebase website.
-import { initializeApp } from "firebase/app";
-In order to use **google authentication** we need to import the following
-import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider  } from 'firebase/auth'
-
->**Firebase-Services for Authentication**
->> getAuth, (To instanziate the services)
->> signInWithRedirect, 
->> signInWithPopup, 
->> GoogleAuthProvider
->**Firebase-Database**
->> getFirestore (To instanziate the services)
->> doc, (to retrieve document inside of the firestore database)
->> getDoc, (getting documents DATA)
->> setDoc, (setting documents DATA)
