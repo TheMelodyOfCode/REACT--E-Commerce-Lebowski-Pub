@@ -5,8 +5,14 @@
     padding: 2rem;
     width: 100%;
     background-color: transparent;
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
+    @include respond(phone-bg) {
+      padding: .8rem;
+    }
     @include respond(phone) {
-      padding: 0;
+      padding: .3rem;
     }
   
     &__nav {
@@ -29,15 +35,29 @@
       display: flex;
       justify-content: flex-start;
       font-size: 1.5rem;
-      @include respond(phone) {
+      @include respond(tab-port) {
         font-size: 1.1rem;
       }
-      @include respond(phone-tiny) {
+      @include respond(phone) {
         font-size: .8rem;
       }
+      @include respond(phone-sm) {
+        display: none;
+      }
+    }
 
+    &__logo-sm {
+        display: none;
+
+      @include respond(phone-sm) {
+        display: block;
+      }
+      @include respond(phone-tiny) {
+        display: none;
+      }
 
     }
+
     &__photo {
       width: 100%;
       max-height: 5.5rem;
@@ -57,10 +77,10 @@
     
     &__item {
       font-size: 1.5rem;
-      @include respond(phone) {
+      @include respond(tab-port) {
         font-size: 1.1rem;
       }
-      @include respond(phone-tiny) {
+      @include respond(phone) {
         font-size: .8rem;
       }
     }
@@ -74,7 +94,10 @@
           text-decoration: none;
           color: $color-green-1;
           transition:all .2s;
-            
+
+          @include respond(phone) {
+            padding: 0.475rem .6rem;
+            }
         }
   
         &:hover,
