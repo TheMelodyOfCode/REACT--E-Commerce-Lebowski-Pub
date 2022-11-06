@@ -1,4 +1,4 @@
-###### 20.10.2022
+###### 27.10.2022
 ## Install Library<br>
 
 > React Router DOM
@@ -33,24 +33,39 @@ and in order to implement a **Nested-Route** we need to import **outlet**<br>
         <Route path='shop'   element={<Shop/>} />
       </Route>
     </Routes>
+    
+#### Link
+Link is essential an anker-tag that takes the installed BrowserRouter and routes to the specific place.
+we utelized the link component in order to lavraged proper routing.<br>
 
-**useNavigate**<br>
+#### useNavigate
 **important**<br>
-It's usually better to use redirect in loaders and actions than this hook<br>
+It's usually better to use navigate in loaders and actions than this hook<br>
 
-The useNavigate hook returns a function that lets you navigate programmatically, for example in an effect:
+The useNavigate hook returns a function that lets you navigate programmatically, for example in an effect:<br>
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";<br>
 
-function useLogoutTimer() {
-  const userIsInactive = useFakeInactiveUser();
-  const navigate = useNavigate();
+function useLogoutTimer() {<br>
+  const userIsInactive = useFakeInactiveUser();<br>
+  const navigate = useNavigate();<br>
 
-  useEffect(() => {
-    if (userIsInactive) {
-      fake.logout();
-      navigate("/session-timed-out");
-    }
-  }, [userIsInactive]);
-}
+  useEffect(() => {<br>
+    if (userIsInactive) {<br>
+      fake.logout();<br>
+      navigate("/session-timed-out");<br>
+    }<br>
+  }, [userIsInactive]);<br>
+}<br>
+
+### Navigate
+Navigate is basically useNavigate() converted into a React component.<br>
+This makes it easy to implement in our React apps.<br>
+The Navigate component replaced the Redirect component that was used in React Router v5.<br>
+
+### useLocation
+useLocation is a hook that allows us to get the current location(or URL) of the web app<br>
+
+const currentLocation = useLocation()<br>
+console.log(currentLocation)<br>
 
