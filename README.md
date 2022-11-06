@@ -13,8 +13,8 @@
 
 
 > I laso want to give credit to **Andrei Neagoie** & especially to **Yihua Zhang** </br>
-> I have learnd **so much** from them and I can highly recommend their teaching methods.
-> Here's the website: https://zerotomastery.io/
+> I have learnd **so much** from them and I can highly recommend their teaching methods. </br>
+>> Here's the website: https://zerotomastery.io/
 
 
 
