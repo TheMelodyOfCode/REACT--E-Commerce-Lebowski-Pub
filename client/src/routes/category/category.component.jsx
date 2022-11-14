@@ -1,5 +1,5 @@
 
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useLayoutEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ProductCard from '../../components/product-card/product-card.component';
@@ -12,8 +12,8 @@ const Category = () => {
     const { category} = useParams();
     const { categoriesMap } = useContext(CategoriesContext);
     const [products, setproducts] = useState(categoriesMap[category]);
-
-    useEffect(()=>{
+    console.log(category);
+    useLayoutEffect(()=>{
         setproducts(categoriesMap[category])
     }, [category, categoriesMap])
 
