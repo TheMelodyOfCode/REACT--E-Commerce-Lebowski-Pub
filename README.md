@@ -47,6 +47,7 @@
 > I want to give credit to **Andrei Neagoie** & especially to **Yihua Zhang** </br>
 > I have learnd **so much** from them and I can highly recommend their teaching methods. </br>
 > Here's the website: https://zerotomastery.io/ </br>
+> If you want to know more about SASS, I recommend **Jonas Schmedtmann**.
 
 
 
