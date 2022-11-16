@@ -9,9 +9,9 @@
 
 #### Firebase
 > In the MySQL & Firebase Files - Folder, -you will find a MySQL file to import </br>
->> and a shop-data.js file for Firebase db in case you want to create your own.</br>
+>> There is a shop-data.js file for Firestore db in case you want to create your own.</br>
 >> The current configuration in the firebase.utils file works though.</br>
->> In case that I will delete the db from firebase one day , I suggest to create your own, </br>
+>> Just in case that I delete the db from firebase one day , I suggest to create your own, </br>
 >> with the provided file </br>
 
 
@@ -23,8 +23,9 @@
 >> Run the webserver first from the main folder - npm start
 
 
-#### Create React APP
+#### React APP
 > Run the app from the client folder - npm start
+> Runs on localhost:3000
 
 
 #### Dokumentation
@@ -33,13 +34,13 @@
 
 
 #### Dataflow
-> In general the information within the code could have been better (i know )
+> The information/documentation within the code could have been better (i know )</br>
 > You will find a mind map in the documentation folder</br>
 > The software to open the mindmap is free - (Wondershare EdrawMind) </br>
 > This will help you:</br>
 >> - To get an overview on how the website works</br>
 >> - How components are connected</br>
->> - Imports to components </br>
+>> - Which imports to components have been made </br>
 
 
 
