@@ -20,12 +20,12 @@
 >> I suggest you use XAMPP. - create a db and import the MySQL file. </br>
 >> Make sure to check your configuration under server/database/dbConnection.js  </br>
 >> If neccessary, change the routes under server/routes/dbRoutes.js</br>
->> Run the webserver first from the main folder - npm start
+>> Run the webserver first from the main folder - npm start</br>
 
 
 #### React APP
-> Run the app from the client folder - npm start
-> Runs on localhost:3000
+> Run the app from the client folder - npm start</br>
+> Runs on localhost:3000</br>
 
 
 #### Dokumentation
@@ -48,7 +48,7 @@
 > I want to give credit to **Andrei Neagoie** & especially to **Yihua Zhang** </br>
 > I have learnd **so much** from them and I can highly recommend their teaching methods. </br>
 > Here's the website: https://zerotomastery.io/ </br>
-> If you want to know more about SASS, I recommend **Jonas Schmedtmann**.
+> If you want to know more about SASS, I recommend **Jonas Schmedtmann**.</br>
 
 
 
