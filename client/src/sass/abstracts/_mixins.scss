@@ -1,18 +1,4 @@
-
 // ##########  MEDIA QUERY MANAGER  ########### \\
-
-/* Desktop first approach
-0      - 600px  Phone
-600    - 900px  tablet portrait
-900    - 1200   tablet landscape
-[1200  - 1800] is where our normal styles apply
-1800px + Big Desktop */
-
-/* $breakpoint argument choices: 
-- phone 
-- tab-port
-- tab-land
-- big-desktop */
 
 /*  NOTE: EM and REM in Media queries are not affected by our root
     font-size settings. EM and REM are ONLY affected by the font settings
@@ -48,11 +34,3 @@
         }
     };
 
-    /* ### CENTER ELEMENT ### */
-    
-    @mixin center-horizontal-vertical {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }

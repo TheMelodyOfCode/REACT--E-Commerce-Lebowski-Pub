@@ -1,4 +1,3 @@
-@import 'sass/abstracts/functions';
 @import 'sass/abstracts/mixins';
 @import 'sass/abstracts/variables';
 
@@ -7,20 +6,20 @@
 @import 'sass/base/typography';
 @import 'sass/base/utilitis';
 
-@import 'src/components/directory/directory.styles.scss';
-@import 'src/components/button/button.styles.scss';
-@import 'src/components/about/about.styles.scss';
-@import 'src/components/login-form/login-form.styles.scss';
-@import 'src/components/signup-form/signup-form.styles.scss';
-@import 'src/components/cart-icon/cart-icon.styles.scss';
-@import 'src/components/cart-dropdown/cart-dropdown.styles.scss';
-@import 'src/components/cart-item/cart-item.styles.scss';
-@import 'src/components/checkout-item/checkout-item.styles.scss';
+@import 'src/components/directory/directory.styles';
+@import 'src/components/button/button.styles';
+@import 'src/components/about/about.styles';
+@import 'src/components/login-form/login-form.styles';
+@import 'src/components/signup-form/signup-form.styles';
+@import 'src/components/cart-icon/cart-icon.styles';
+@import 'src/components/cart-dropdown/cart-dropdown.styles';
+@import 'src/components/cart-item/cart-item.styles';
+@import 'src/components/checkout-item/checkout-item.styles';
 
-@import 'src/routes/home/home.styles.scss';
-@import 'src/routes/goodbye/goodbye.styles.scss';
-@import 'src/routes/navigation/navigation.styles.scss';
-@import 'src/routes/authentication/authentication.styles.scss';
-@import 'src/routes/shop/shop.styles.scss';
-@import 'src/routes/checkout/checkout.styles.scss';
-@import 'src/routes/footer/footer.styles.scss';
+@import 'src/routes/home/home.styles';
+@import 'src/routes/goodbye/goodbye.styles';
+@import 'src/routes/navigation/navigation.styles';
+@import 'src/routes/authentication/authentication.styles';
+@import 'src/routes/shop/shop.styles';
+@import 'src/routes/checkout/checkout.styles';
+@import 'src/routes/footer/footer.styles';
