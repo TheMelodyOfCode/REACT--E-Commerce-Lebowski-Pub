@@ -1,4 +1,4 @@
-# Tribute-to-Lebowski-pub-and-Movie
+# eCommerce Website
 ### REACT-MySQL-Firebase
 
 #### Lebowski Pub & The Big Lebowski Movie
@@ -15,8 +15,8 @@
 >> with the provided file </br>
 
 
-#### Webserver - MySQL
-> There is a webserver that runs on port 3001 </br>
+#### Testserver - MySQL
+> There is a test-server that runs on port 3001 </br>
 >> I suggest you use XAMPP. - create a db and import the MySQL file. </br>
 >> Make sure to check your configuration under server/database/dbConnection.js  </br>
 >> If neccessary, change the routes under server/routes/dbRoutes.js</br>
@@ -28,13 +28,12 @@
 > Runs on localhost:3000</br>
 
 
-#### Dokumentation
+#### Documentation
 > There is a documentation folder with information about certain concepts</br>
 >> Firebase, React Router, User-Context & general information.</br>
 
 
 #### Dataflow
-> The information/documentation within the code could have been better (i know )</br>
 > You will find a mind map in the documentation folder</br>
 > The software to open the mindmap is free - (Wondershare EdrawMind) </br>
 > This will help you:</br>
