@@ -30,9 +30,10 @@
 
 #### VPN - Proxy (possible error)
 > In case you get the following Error:  
-> Invalid options object. Dev Server has been initialized using an options object that does not match the API schema.    
+ - Invalid options object. 
+ - Dev Server has been initialized using an options object that does not match the API schema.    
  - options.allowedHosts[0] should be a non-empty string.  
-> make sure to turn your proxy or vpn off 
+> make sure to turn off proxy or vpn if you have one
 
 
 
