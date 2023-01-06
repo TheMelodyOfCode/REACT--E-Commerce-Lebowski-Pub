@@ -28,6 +28,15 @@
 > Runs on localhost:3000</br>
 
 
+#### VPN - Proxy (possible error)
+> In case you get the following Error:  
+> Invalid options object. Dev Server has been initialized using an options object that does not match the API schema.    
+ - options.allowedHosts[0] should be a non-empty string.  
+> make sure to turn your proxy or vpn off 
+
+
+
+
 #### Documentation
 > There is a documentation folder with information about certain concepts</br>
 >> Firebase, React Router, User-Context & general information.</br>
