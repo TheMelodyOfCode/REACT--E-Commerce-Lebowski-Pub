@@ -1,7 +1,7 @@
 # eCommerce Website
 ### REACT-MySQL-Firebase
 
-#### Lebowski Pub & The Big Lebowski Movie
+#### Tribute to Lebowski Pub & The Big Lebowski Movie
 > This is a fully fictional project to learn React in combination with MySql and Firebase </br>
 > The idea was to pay tribute to an awesome movie and the Theme Pub (Lebowski) former located in Edinburgh.</br>
 > Unfortunately this pub doesn't exist anymore due to corona ... but the memory prevails :-) </br>
